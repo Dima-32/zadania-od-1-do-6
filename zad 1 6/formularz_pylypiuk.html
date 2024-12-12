@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz Najlepszej Gry Komputerowej</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #66FFFF;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 50px;
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            margin-top: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        textarea {
+            resize: none;
+        }
+        .radio-inline, .checkbox-inline {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        button {
+            background-color: #28a745;
+            color: #ffffff;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Formularz Najlepszej Gry Komputerowej</h1>
+        <form action="mailto:mkryniew@ids.gda.pl" method="POST" enctype="text/plain">
+            <label for="username">Imię i nazwisko:</label>
+            <input type="text" id="username" name="username" placeholder="Wpisz swoje imię" required>
+
+            <label for="email">Adres e-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Wpisz swój e-mail">
+
+            <label for="game">Twoja ulubiona gra komputerowa:</label>
+            <input type="text" id="game" name="game" placeholder="Podaj nazwę gry" required>
+
+            <label>Ocena gry w skali 1-10:</label>
+            <input type="number" name="rating" min="1" max="10">
+
+            <label>Dlaczego ta gra jest Twoją ulubioną?</label>
+            <textarea id="reason" name="reason" rows="4" placeholder="Podziel się swoją opinią..."></textarea>
+
+            <label>Wybierz gatunek gry:</label>
+            <div>
+                <label class="radio-inline"><input type="radio" name="genre" value="RPG"> RPG</label>
+                <label class="radio-inline"><input type="radio" name="genre" value="FPS"> FPS</label>
+                <label class="radio-inline"><input type="radio" name="genre" value="Strategy"> Strategie</label>
+                <label class="radio-inline"><input type="radio" name="genre" value="Sports" checked> Sportowe</label>
+                <label class="radio-inline"><input type="radio" name="genre" value="Other"> Inne</label>
+            </div>
+
+            <label>Tryb gry:</label>
+            <div>
+                <label class="radio-inline"><input type="radio" name="mode" value="singleplayer" checked> Tryb jednoosobowy</label>
+                <label class="radio-inline"><input type="radio" name="mode" value="multiplayer"> Tryb wieloosobowy</label>
+                <label class="radio-inline"><input type="radio" name="mode" value="co-op"> Tryb kooperacji</label>
+            </div>
+
+            <label>Platforma, na której grasz najczęściej:</label>
+            <div>
+                <label><input type="radio" name="platform" value="PC"> PC</label><br>
+                <label><input type="radio" name="platform" value="console" checked> Konsola</label><br>
+                <label><input type="radio" name="platform" value="mobile"> Urządzenie mobilne</label>
+            </div>
+
+            <label>Elementy, które cenisz w grach:</label>
+            <div>
+                <label><input type="checkbox" name="features" value="graphics"> Grafika</label><br>
+                <label><input type="checkbox" name="features" value="story"> Fabuła</label><br>
+                <label><input type="checkbox" name="features" value="gameplay"> Rozgrywka</label><br>
+                <label><input type="checkbox" name="features" value="multiplayer"> Tryb wieloosobowy</label><br>
+                <label><input type="checkbox" name="features" value="soundtrack"> Ścieżka dźwiękowa</label>
+            </div>
+
+            <label>Wybór platformy do grania:</label>
+            <select name="platform">
+                <option value="PC" selected>PC</option>
+                <option value="PlayStation">PlayStation</option>
+                <option value="Xbox">Xbox</option>
+                <option value="Nintendo">Nintendo</option>
+                <option value="Mobile">Mobile</option>
+            </select>
+
+            <button type="submit">WYŚLIJ</button>
+            <button type="reset">CZYŚĆ</button>
+        </form>
+    </div>
+</body>
+</html>
